@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>okej</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+    <style>
+        .container {
+            display: flex;
+
+        }
+        #sklonovat{height: 20px; width: 100px;margin-top: 15px;} 
+        #veta1 {height: 100px; width: 100px; background-color: aqua;display: flex; align-items: center; justify-content: center; border: solid black; margin-right: 15px;}
+        #veta2 {height: 100px; width: 100px; background-color: aqua;display: flex; align-items: center; justify-content: center; border: solid black;  margin-right: 15px;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="veta1"></div>
+        <div id="veta2"></div>
+        <div id="increment-count">
+          <button id="sklonovat" >sklonovat</button>
+        </div>
+        
+
+    </div>
+    <script>
+
+const incrementCount = document.getElementById("sklonovat");
+
+
+
+const totalCount = document.getElementById("veta");
+
+
+var count = 0;
+
+
+function okej() {
+  document.getElementById("veta1").innerHTML = Math.floor(Math.random() * 100);
+  
+
+}
+
+function okej1() {
+    document.getElementById("veta2").innerHTML =  Math.floor(Math.random() * 100);
+
+}
+
+const handleIncrement = () => {
+    const myTimeout = setTimeout(okej1, 1);
+    const myTimeout1 = setTimeout(okej, 1);
+    
+
+};
+
+
+
+
+incrementCount.addEventListener("click", handleIncrement);
+
+    </script>
+</body>
+
+
+</html>

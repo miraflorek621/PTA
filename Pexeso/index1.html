@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>okej</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+    <style>#sklonovat{height: 20px; width: 100px;margin-top: 15px;} </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="veta"></div>
+        <div id="increment-count">
+          <button id="sklonovat" >sklonovat</button>
+        </div>
+        
+
+    </div>
+    <script>
+
+const incrementCount = document.getElementById("sklonovat");
+
+
+
+const totalCount = document.getElementById("veta");
+
+
+var count = 0;
+
+if (count == 0){
+    totalCount.innerHTML =  "Ošklivé káčátko šlo do stodoly";
+    }
+
+
+
+function okej() {
+  document.getElementById("veta").innerHTML = "Ošklivější káčátko šlo do stodoly"
+  const myTimeout1 = setTimeout(okej1, 3000);
+
+}
+
+function okej1() {
+    document.getElementById("veta").innerHTML = "Nejošklivější káčátko šlo do stodoly"
+}
+
+const handleIncrement = () => {
+    const myTimeout = setTimeout(okej, 3000);
+    count++;
+
+
+};
+
+
+/*
+const handleIncrement = () => {
+  count++;
+if (count == 1){
+    totalCount.innerHTML =  "Ošklivější káčátko šlo do stodoly";
+}
+if (count == 2){
+    totalCount.innerHTML =  "Nejošklivější káčátko šlo do stodoly";
+}
+};
+*/
+
+
+
+incrementCount.addEventListener("click", handleIncrement);
+
+    </script>
+</body>
+
+
+</html>
